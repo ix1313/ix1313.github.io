@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="wrapper">
+    <head>
+      <style>
+      body{font-family: "Comic Sans MS", cursive}
+      </style>
+      <title>The title of webpage</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <h1 style="color:red">This is the body</h1>
+      <p style="color:blue">Τι θα ήθελα να φάω όταν γυρίσω Ελλάδα 😋</p>
+      <ul>
+        <li>μουσακα</li>
+        <img src="https://elpidaslittlecorner.gr/wp-content/uploads/2018/08/mousaka2.jpg" alt="μουσακας">
+        <li>χταποδακι</li>
+      </ul>
+      <img src="https://media1.tenor.com/m/KdQ8WRxaK7EAAAAC/stop-jk-simmons.gif" alt="stop">
+      <p style="color:green">Where you rushing or were you dragging?</p>
+      <img src="https://media1.tenor.com/m/hSRJz6InJ7QAAAAd/whiplash-not-my-tempo.gif" alt="okay">
+      <p>He was rushing <a href="https://media.tenor.com/FHhOIcmmGNYAAAAM/anton-chigurh-no-country-for-old-men.gif">((</a></p>
+    </body>
+  </div>
+</body>
+</html>
