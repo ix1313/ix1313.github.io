@@ -1,86 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Duck Reviews 🎬</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    :root {
-      --bg: #282a36;
-      --fg: #f8f8f2;
-      --comment: #6272a4;
-      --pink: #ff79c6;
-      --purple: #bd93f9;
-      --green: #50fa7b;
-      --yellow: #f1fa8c;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--fg);
-      font-family: system-ui, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      line-height: 1.7;
-    }
-
-    h1 {
-      color: var(--pink);
-    }
-
-    a {
-      color: var(--purple);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--green);
-      text-decoration: underline;
-    }
-
-    .review {
-      margin-bottom: 1.5rem;
-    }
-
-    .date {
-      color: var(--comment);
-      font-size: 0.9rem;
-    }
-
-    footer {
-      margin-top: 4rem;
-      color: var(--comment);
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Portal</title>
+    <link rel="icon" type="image/svg" href="images/icon.svg">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <h1>🦆 Duck Reviews</h1>
-  <p>Movie reviews, thoughts, and cinematic rambling.</p>
 
-  <hr>
+    <header>
+        <h1>Pet Adoption Portal</h1>
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('search')">Search Pets</button>
+            <button onclick="showSection('feedback')">Feedback Form</button>
+        </nav>
+    </header>
 
-  <div class="review">
-    <a href="reviews/first-movie.html">
-      <strong>Blade Runner (1982)</strong>
-    </a>
-    <div class="date">2026-01-01</div>
-  </div>
-  <div class="review">
-    <a href="reviews/first-site.html">
-      <strong>my first website</strong>
-    </a>
-    <div class="date">2026-01-01</div>
-  </div>
+<!--  ================== -->
+<!--  Home page -->
+<!--  ================== -->
 
-  <!-- Add more reviews here -->
+    <!-- Section 1: Home -->
+    <section id="home">
+            <div class="hero-banner">
+                <!-- 1. The Video Base Layer -->
+                <video autoplay loop muted playsinline class="video-backdrop">
+                    <source src="images/covervid.mp4" type="video/mp4">
+                </video>
+                
+                <!-- 2. The Text Top Layer -->
+                <div class="hero-text-box">
+                    <h2>Welcome to our Portal</h2>
+                    <p>Find your perfect pet companion today.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    © 2026 Duck Reviews
-  </footer>
+<!--  ================== -->
+<!--  Search Pets page -->
+<!--  ================== -->
+
+    <!-- Section 2: Search -->
+    <section id="search" style="display:none;">
+        <h2>Search Pets</h2>
+        
+        <!-- The drop-down trigger. It calls filterPets() every time you change it -->
+        <label for="pet-filter">Filter by Type:</label>
+        <select id="pet-filter" onchange="filterPets()">
+            <option value="All">All Pets</option>
+            <option value="Dog">Dogs</option>
+            <option value="Cat">Cats</option>
+        </select>
+
+        <div id="pet-container"></div>
+    </section>
+
+<!--  ================== -->
+<!--  Feedback Form page -->
+<!--  ================== -->
+
+    <!-- Section 3: Feedback -->
+    <section id="feedback" style="display:none;">
+        <h2>Feedback Form</h2>
+        <form id="form-element" onsubmit="handleForm(event)">
+            <label for="username">Your Name:</label>
+            <input type="text" id="username" required><br><br>
+
+            <label for="email">Your Email:</label>
+            <input type="text" id="email" required><br><br>
+                
+            <label for="comments">Comments:</label>
+            <textarea id="comments" required></textarea><br><br>
+                
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <p id="form-response" style="color: green; font-weight: bold;"></p>
+    </section>
+    </main>
+
+<!--  ================== -->
+<!--  Feedback page -->
+<!--  ================== -->
+
+    <footer>
+        <!-- Container wrapper to house our three horizontal columns -->
+        <div class="footer-columns">
+            
+            <!-- Left Column: About Us -->
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>We are a local owned pet adoption center dedicated to connecting loving pets to their forever families.</p>
+            </div>
+
+            <!-- Center Column: Contact Information -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>📍 6000 Universitetsparken 1, Kolding</p>
+                <p>📞 Phone: +45 46 20 31 05</p>
+                <p>✉️ Email: adoptpetportal@yahoo.dk</p>
+            </div>
+
+            <!-- Right Column: Interactive Map Embed (Multimodal Element) -->
+            <div class="footer-col">
+                <h3>Our Location</h3>
+                <div class="map-container">
+                    <!-- Embedded Map iframe: Accessible, lightweight fallback coordinates -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=sdu%20kolding&amp;maptype=roadmap&amp;zoom=14" 
+                        width="100%" 
+                        height="150" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="Pet Adoption Center Location Map">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

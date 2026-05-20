@@ -1,0 +1,6 @@
+{
+  "pets": [
+    {"name": "Buddy", "type": "Dog", "age": "2 years", "img": "images/dog.jpg"},
+    {"name": "Whiskers", "type": "Cat", "age": "1 year", "img": "images/cat.jpg"}
+  ]
+}

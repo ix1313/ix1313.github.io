@@ -1,0 +1,167 @@
+/* ================== */
+/* Body, Header, Footer */
+/* ================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #F9ECE5;
+    color: #014B43;
+}
+
+header, footer {
+    background-color: #014B43;
+    color: #F9ECE5;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+}
+
+/* ================== */
+/* Navigation buttons */
+/* ================== */
+nav button {
+    background-color: #099078;
+    color: white;
+    border: 2px solid #014B43; /* button shadows */
+    border-radius: 4px; /* button edges circular */
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; /* changes pointer indicator */
+}
+
+nav button:hover {
+    background-color: #9C2113; /* button color on hover */
+    color: #F9ECE5; /* text color on hover */
+}
+
+/* ================== */
+/* Search, Feedback sections padding so text doesn't touch the very edge */
+/* ================== */
+
+#search, #feedback {
+    padding: 20px;
+}
+
+/* Home Page Video Backdrop Configuration */
+.hero-banner {
+    position: relative; /* Essential for relative layering */
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* center text box horizontal */
+    align-items: center; /* center text box vertical */
+}
+
+/* Forces the video to cover the container space behind the text */
+.video-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* acts as cover. Covers entire page */
+    z-index: 8; /* order of appearence on z-axis (1 lower than the text box) */
+}
+
+/* High contrast box over the video background */
+.hero-text-box {
+    position: relative; 
+    z-index: 9; /* order of appearence on z-axis (1 higher than the video backdrop) */
+    background-color: rgba(255, 214, 209, 0.95);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 3px solid #9C2113;
+}
+
+/* text box text 1 */
+.hero-text-box h2 {
+    color: #9C2113;
+    font-size: 2.5rem; /* Bigger Font */
+    margin: 0 0 10px 0;
+}
+/* text box text 2 */
+.hero-text-box p {
+    color: #014B43;
+    font-size: 1.3rem; /* Bigger Font */
+    margin: 0;
+    font-weight: bold;
+}
+
+
+/* ================== */
+/* Feedback page */
+/* ================== */
+
+/* submition button */
+form button {
+    background-color: #099078;
+    color: white;
+    border: 1px solid #014B43;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #9C2113; 
+}
+/* submition button on hover */
+select, input, textarea {
+    padding: 6px;
+    border: 2px solid #014B43;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+
+/* ================== */
+/* Search Pets page */
+/* ================== */
+
+/* Simple Flexbox Grid for Pets */
+.pet-card {
+    border: 2px solid #014B43;
+    background: #FFD6D1;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    color: #014B43;
+}
+
+.pet-card h3 {
+    color: #9C2113; /* Deep red pet names */
+    margin-top: 0;
+}
+
+/* Responsive CSS */
+@media (min-width: 600px) {
+    #pet-container {
+        display: flex;
+        gap: 20px;
+    }
+    .pet-card {
+        flex: 1;
+    }
+}
+
+@media (max-width: 599px) {
+    nav button {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+    .hero-text-box h2 {
+        font-size: 1.8rem;
+    }
+    .hero-text-box p {
+        font-size: 1rem;
+    }
+}
