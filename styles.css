@@ -47,7 +47,7 @@ nav button:hover {
     padding: 20px;
 }
 
-/* Home Page Video Backdrop Configuration */
+/* Video & Text */
 .hero-banner {
     position: relative; /* Essential for relative layering */
     height: 500px;
@@ -57,7 +57,7 @@ nav button:hover {
     align-items: center; /* center text box vertical */
 }
 
-/* Forces the video to cover the container space behind the text */
+/* Video */
 .video-backdrop {
     position: absolute;
     top: 0;
@@ -68,7 +68,7 @@ nav button:hover {
     z-index: 8; /* order of appearence on z-axis (1 lower than the text box) */
 }
 
-/* High contrast box over the video background */
+/* Text Box */
 .hero-text-box {
     position: relative; 
     z-index: 9; /* order of appearence on z-axis (1 higher than the video backdrop) */
@@ -126,7 +126,7 @@ select, input, textarea {
 /* Search Pets page */
 /* ================== */
 
-/* Simple Flexbox Grid for Pets */
+/* Flexbox Grid for Pets */
 .pet-card {
     border: 2px solid #014B43;
     background: #FFD6D1;
@@ -141,7 +141,7 @@ select, input, textarea {
     margin-top: 0;
 }
 
-/* Responsive CSS */
+/* adjust pet containers to page */
 @media (min-width: 600px) {
     #pet-container {
         display: flex;
@@ -152,6 +152,10 @@ select, input, textarea {
     }
 }
 
+
+
+
+/* adjust nav buttons to page */
 @media (max-width: 599px) {
     nav button {
         display: block;
